@@ -1,4 +1,5 @@
 var express = require('express')
+var cors = require('cors')
 var http = require('http')
 var WebSocketServer = require('ws').Server
 var Mixpanel = require('mixpanel')
@@ -18,6 +19,15 @@ logger.info('server.booting')
 logger.info('http.booting')
 
 var app = express()
+app.use(cors({
+  origin: function(origin, callback){
+    // allow requests with no origin
+    // (like mobile apps or curl requests)
+    if(!origin) return callback(null, true);
+    return callback(null, true);
+  },
+}));
+
 app.set('port', process.env.PORT || 8000)
 
 app.use(express.static('web'))
