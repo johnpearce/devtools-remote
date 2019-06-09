@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "express": "^4.12.3",
+    "cors": "^2.8.5",
     "guid": "0.0.12",
     "mixpanel": "^0.3.2",
     "node-uuid": "^1.4.7",
