@@ -118,7 +118,7 @@ io.sockets.on('connection', function (socket) {
     targets[sessionId].push({
       description: '',
       devtoolsFrontendUrl: '/devtools/devtools.html?ws=' + webSocketUrl,
-      devtoolsUrl: 'chrome-devtools://devtools/remote/serve_rev/@8925c3c45f3923bc78ffc841842183cc592a0143/inspector.html?wss=' + webSocketUrl + '&remoteFrontend=true&dockSide=unlocked&experiments=true',
+      devtoolsUrl: 'https://chrome-devtools-frontend.appspot.com/serve_file/@1c32c539ce0065a41cb79da7bfcd2c71af1afe62/inspector.html?wss=' + webSocketUrl + '&remoteFrontend=true&dockSide=unlocked&experiments=true',
       id: uuid(),
       title: data.title,
       type: 'page',
